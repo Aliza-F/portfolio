@@ -32,7 +32,7 @@ body {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  background: cyan;
+  background: rgba(204, 20, 214, 0.485);
   color: black;
   font-weight: bold;
 }
@@ -54,7 +54,7 @@ body {
 }
 
 .project {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(91, 15, 154, 0.241);
   padding: 20px;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
