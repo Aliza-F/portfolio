@@ -15,17 +15,17 @@ body {
 .overlay {
   background: rgba(255, 248, 240, 0.75);
   min-height: 100vh;
-  padding: 40px;
+  padding: 60px 30px;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .hero h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin-bottom: 5px;
   color: #5c4d7d;
   text-shadow: 2px 2px 4px rgba(199, 172, 202, 0.5);
@@ -33,7 +33,7 @@ body {
 
 .hero p {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #7d6b8d;
   font-style: italic;
 }
@@ -113,29 +113,33 @@ body {
 }
 
 .section {
-  max-width: 900px;
-  margin: 0 auto 60px;
+  max-width: 800px;
+  margin: 0 auto 100px;
+  text-align: center;
   font-family: 'Poppins', sans-serif;
+  padding: 40px 50px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
 }
 
 .section h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
   color: #6b5b7d;
-  border-bottom: 2px solid #c9b8d9;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .section h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #7d6b8d;
+  margin-top: 25px;
 }
 
 .section p {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.9;
   color: #4a4a4a;
 }
 
@@ -147,34 +151,53 @@ body {
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .project {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 25px;
-  border-radius: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 35px 40px;
+  border-radius: 25px;
+  transition: all 0.4s ease;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 40px rgba(156, 136, 187, 0.15);
 }
 
 .project:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 30px rgba(156, 136, 187, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(156, 136, 187, 0.25);
+}
+
+.project h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.project p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5a5a5a;
 }
 
 .project a {
+  display: inline-block;
+  margin-top: 15px;
   color: #8b7aa8;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  padding: 8px 20px;
+  background: rgba(199, 172, 202, 0.2);
+  border-radius: 20px;
 }
 
 .project a:hover {
   color: #6b5b7d;
+  background: rgba(199, 172, 202, 0.4);
 }
 
 /* Animations */
