@@ -8,12 +8,12 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: #f8f4f0;
-  background: url("assets/bg.gif") no-repeat center center fixed;
+  background: url("neoncity.gif") no-repeat center center fixed;
   background-size: cover;
 }
 
 .overlay {
-  background: rgba(255, 248, 240, 0.75);
+  background: rgba(255, 248, 240, 0.6);
   min-height: 100vh;
   padding: 60px 30px;
 }
