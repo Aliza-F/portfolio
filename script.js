@@ -18,3 +18,13 @@ function adjustVolume() {
   const volumeSlider = document.getElementById("volume-slider");
   music.volume = volumeSlider.value;
 }
+
+// Simple interactivity for the welcome photo placeholder
+function toggleWelcomeVibe() {
+  const btn = document.querySelector('.about-welcome-photo');
+  if (!btn) return;
+
+  const isOn = btn.classList.toggle('is-on');
+  btn.textContent = isOn ? '✨ Welcome!' : 'Welcome Photo';
+}
+

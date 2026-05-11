@@ -13,10 +13,11 @@ body {
 }
 
 .overlay {
-  background: rgba(255, 248, 240, 0.6);
+  background: rgba(255, 248, 240, 0.45);
   min-height: 100vh;
   padding: 60px 30px;
 }
+
 
 .hero {
   text-align: center;
@@ -143,6 +144,48 @@ body {
   color: #4a4a4a;
 }
 
+/* Welcome section layout (text left, photo right) */
+.about-welcome {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  text-align: left;
+}
+
+.about-welcome-photo {
+  height: 180px;
+  border-radius: 22px;
+  border: 2px dashed rgba(199, 172, 202, 0.6);
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b7aa8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.about-welcome-photo.is-on {
+  border-style: solid;
+  border-color: rgba(199, 172, 202, 0.95);
+  background: rgba(255, 255, 255, 0.75);
+  transform: translateY(-2px);
+}
+
+
+@media (min-width: 900px) {
+  .about-welcome {
+    grid-template-columns: 1fr 0.6fr;
+    gap: 44px;
+    text-align: left;
+  }
+}
+
+
+
+
 .section .skills {
   font-family: 'Poppins', sans-serif;
   color: #6b5b7d;
@@ -216,8 +259,80 @@ body {
   }
 }
 
+/* About Sections (Home page) */
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 10px;
+}
+
+.about-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
+  text-align: left;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+@media (min-width: 800px) {
+  .about-strip {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 20px;
+  }
+}
+
+.about-strip-photo {
+  height: 120px;
+  border-radius: 18px;
+  border: 2px dashed rgba(199, 172, 202, 0.6);
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b7aa8;
+  font-weight: 600;
+}
+
+.about-strip-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Put photos in a row on wide screens */
+@media (min-width: 800px) {
+  .about-strip-photo {
+    height: 140px;
+  }
+}
+
+.about-strip-content h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #6b5b7d;
+  font-size: 2rem;
+  margin: 0 0 10px;
+}
+
+.about-strip-content p {
+  margin: 0;
+  color: #5a5a5a;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
 /* Project Pages */
+
 .project-hero {
+
   text-align: center;
   margin-bottom: 60px;
   padding: 40px 20px;

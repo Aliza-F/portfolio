@@ -26,13 +26,67 @@
       </audio>
     </header>
 
-    <section class="section fade-in">
-      <h2>Hey There! 👋</h2>
-      <h3>Welcome to my little corner of the internet ✨</h3>
-      <p>
-          I'm Aliza, a student developer who loves building cool things! 💻 From tinkering with Arduino to making websites and experimenting with machine learning, I enjoy bringing ideas to life through code. I also really like debugging (yes, really!) and making systems work better. I'm currently learning game dev and hope to launch a game soon sometime this year 🚀
-      </p>
+    <section class="section fade-in about-welcome">
+      <div class="about-welcome-text">
+        <h2>Hey There! 👋</h2>
+        <h3>Welcome to my little corner of the internet ✨</h3>
+        <p>
+            I'm Aliza, a student developer who loves building cool things! 💻 From tinkering with Arduino to making websites and experimenting with machine learning, I enjoy bringing ideas to life through code. I also really like debugging (yes, really!) and making systems work better. I'm currently learning game dev and hope to launch a game soon sometime this year 🚀
+        </p>
+      </div>
+
+      <button type="button" class="about-welcome-photo" aria-label="Toggle welcome vibe" onclick="toggleWelcomeVibe()">Welcome Photo</button>
+
     </section>
+
+
+    <section class="section fade-in">
+      <h2>About Me 🌿</h2>
+      <p>
+        Here are the parts of life that inspire my coding—each section can hold multiple photos.
+      </p>
+
+      <div class="about-sections">
+        <section class="about-strip fade-in">
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/hiking1.heic" alt="" /></div>
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/hiking2.heic" alt="" /></div>
+          <div class="about-strip-content">
+            <h3>Hiking & Nature</h3>
+            <p>I love hiking, exploring new trails, and connecting with nature. Big ideas often start on the path.</p>
+          </div>
+        </section>
+
+        <section class="about-strip fade-in">
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/coding1.png" alt="" /></div>
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/coding2.heic" alt="" /></div>
+          <div class="about-strip-content">
+            <h3>Coding & Creative Builds</h3>
+            <p>I enjoy turning ideas into working code—websites, games, and creative projects where debugging is part of the fun.</p>
+          </div>
+        </section>
+
+        <section class="about-strip fade-in">
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/arduino1.heic" alt="" /></div>
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/arduio2.jpg" alt="" /></div>
+          <div class="about-strip-content">
+            <h3>Arduino Projects</h3>
+            <p>From Arduino/C/C++ experiments to hands-on tinkering, I like building physical things that do something cool.</p>
+          </div>
+        </section>
+
+        <section class="about-strip fade-in">
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/teaching1.jpg" alt="" /></div>
+          <div class="about-strip-photo" aria-hidden="true"><img src="images/teaching2.heic" alt="" /></div>
+          <div class="about-strip-content">
+            <h3>Teaching & Mentoring</h3>
+            <p>I’ve helped as a coding club instructor and supported Grade 8 math and science—because learning gets better when you share it.</p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+
 
     <section class="section fade-in">
       <h2>Projects ✨</h2>
@@ -55,7 +109,8 @@
       <p>PS. I also built this website myself! 🌟 Click <a href="https://github.com/Aliza-F/portfolio">here</a> to check out the code!</p>
 
       <h2>Skills ✨</h2>
-      <p class="skills">JavaScript • HTML • CSS • Lua • SQL • Arduino (C/C++) • p5.js • ml5.js • Git • Debugging • Testing • Problem Solving</p>
+      <p class="skills">JavaScript • HTML • CSS • Lua • Python • SQL • Arduino (C/C++) • p5.js • ml5.js • Git • Debugging • Testing • Problem Solving</p>
+
     </section>
 
   </div>
