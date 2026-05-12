@@ -453,6 +453,41 @@ body {
   box-shadow: 0 10px 30px rgba(155, 138, 176, 0.5);
 }
 
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.social-icons a {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(199, 172, 202, 0.45);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(155, 138, 176, 0.35);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.social-icons img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+
 .project-footer {
   text-align: center;
   padding: 30px;
