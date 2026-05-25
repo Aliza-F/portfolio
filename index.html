@@ -3,163 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <title>Aliza Faraz | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="updatedstyle.css" />
 </head>
 
 <body>
-  <script src="script.js"></script>
-  <div class="overlay">
 
-    <header class="hero fade-in">
+
+
+
+  <div class="overlay">
+      <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">AF</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="mailto:alizafaraz122@gmail.com">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <p class="hero-eyebrow">Welcome to my corner of the internet</p>
       <h1>Aliza Faraz</h1>
-      <p>Developer • Student • Innovator</p>
-      <div class="social-icons" aria-label="Social links">
-        <a href="mailto:alizafaraz122@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
-          <img src="images/gmail.png" alt="" />
+      <p class="hero-sub">Developer • Student • Innovator</p>
+      <div class="hero-divider"></div>
+
+      <div class="social-icons">
+        <a href="mailto:alizafaraz122@gmail.com" target="_blank" rel="noopener" aria-label="Email">
+          <img src="images/gmail.png" alt="Email" />
         </a>
-        <a href="https://www.instagram.com/_alizaf_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <img src="images/insta.png" alt="" />
+
+        <a href="https://www.instagram.com/_alizaf_/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/insta.png" alt="Instagram" />
         </a>
-        <a href="https://github.com/Aliza-F" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <img src="images/git.png" alt="" />
+
+        <a href="https://github.com/Aliza-F" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="images/git.png" alt="GitHub" />
         </a>
       </div>
       
       
       <div class="music-player">
-        <button id="play-btn" class="music-btn" onclick="toggleMusic()">▶️</button>
-        <div class="volume-container">
-          <span>🔊</span>
-          <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" oninput="adjustVolume()">
-        </div>
-      
+      <span class="music-label">Now playing</span>
+      <button id="play-btn" class="music-btn" onclick="toggleMusic()" aria-label="Play/Pause music">▶️</button>
+      <div class="volume-container">
+        <span>🔊</span>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" oninput="adjustVolume()" aria-label="Volume">
+      </div>
       <audio id="bg-music" loop>
         <source src="Howl's_Moving_Castle_Sleepy_Vibe_128k.mp3" type="audio/mpeg">
       </audio>
+    </div>
+
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-dot"></div>
+    </div>
+
     </header>
-
-    <section class="section fade-in about-welcome">
-      <div class="about-welcome-text">
-        <h2>Hey There! 👋</h2>
-        <h3>Welcome to my little corner of the internet ✨</h3>
-        <p>
-            Hi, I'm Aliza! 
-
-I'm a Systems and Computing Engineering student and developer who loves building cool things. I enjoy the challenge of making hardware and software talk to each other, tinkering with everything from Arduino sensors to React applications. I actually enjoy debugging (yes, really!) and I'm currently focused on launching my first major game development project. My goal is to use engineering to build a more sustainable and inclusive future
-        </p>
+  <!-- WELCOME -->
+  <section id="about">
+    <div class="container">
+      <div class="glass-card reveal">
+        <div class="welcome-grid">
+          <div class="welcome-text">
+            <span class="section-label">Hey there 👋</span>
+            <h2>Welcome!</h2>
+            <p class="tagline">Big ideas start on the trail and come alive in code ✨</p>
+            <p>
+              Hi, I'm Aliza! I'm a Systems and Computing Engineering student who loves
+              building cool things — from React apps to Arduino sensors. I genuinely enjoy
+              debugging (yes, really), and I'm currently working on launching my first major
+              game development project. My goal is to use engineering to build a more
+              sustainable and inclusive future.
+            </p>
+          </div>
+          <button type="button" class="welcome-gif-btn" onclick="toggleWelcomeVibe()" aria-label="Toggle welcome vibe">
+            <img src="images/hello-wave.gif" alt="Hello wave" />
+          </button>
+        </div>
       </div>
-
-      <button type="button" class="about-welcome-photo" aria-label="Toggle welcome vibe" onclick="toggleWelcomeVibe()">
-        <img src="images/hello-wave.gif" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:22px;" />
-      </button>
-
-    </section>
-
-
-    <section class="section fade-in">
-      <h2>About Me 🌿</h2>
-
-
-      <div class="about-sections">
-        <section class="about-strip fade-in">
-          <div class="about-strip-photo" aria-hidden="true">
+    </div>
+  </section>
+ 
+  <!-- ABOUT STRIPS -->
+  <section>
+    <div class="container">
+      <span class="section-label reveal">A little about me</span>
+      <h2 class="section-title reveal">Interests & Passions</h2>
+      <div class="section-rule reveal"></div>
+ 
+      <div class="about-strips">
+ 
+        <div class="about-strip reveal">
+          <div class="strip-photo">
             <picture>
               <source srcset="images/hiking1.webp" type="image/webp" />
-              <img src="images/hiking1.jpg" alt="" />
+              <img src="images/hiking1.jpg" alt="Hiking" />
             </picture>
           </div>
-          <div class="about-strip-photo" aria-hidden="true">
+          <div class="strip-photo">
             <picture>
               <source srcset="images/hiking2.webp" type="image/webp" />
-              <img src="images/hiking2.jpg" alt="" />
+              <img src="images/hiking2.jpg" alt="Nature trail" />
             </picture>
           </div>
-          <div class="about-strip-content">
-            <h3>Hiking & Nature</h3>
-            <p>I love hiking, exploring new trails, and connecting with nature. Big ideas often start on the path!</p>
+          <div class="strip-content">
+            <h3>Hiking & Nature 🌿</h3>
+            <p>I love exploring new trails and connecting with nature. Big ideas often start on the path!</p>
           </div>
-        </section>
-
-        <section class="about-strip fade-in">
-          <div class="about-strip-photo" aria-hidden="true"><img src="images/coding1.png" alt="" /></div>
-          <div class="about-strip-photo" aria-hidden="true">
+        </div>
+ 
+        <div class="about-strip reveal">
+          <div class="strip-photo"><img src="images/coding1.png" alt="Coding" /></div>
+          <div class="strip-photo">
             <picture>
               <source srcset="images/coding2.webp" type="image/webp" />
-              <img src="images/coding2.jpg" alt="" />
+              <img src="images/coding2.jpg" alt="Creative builds" />
             </picture>
           </div>
-          <div class="about-strip-content">
-            <h3>Coding & Creative Builds</h3>
-            <p>I enjoy turning ideas into working code websites, games, and creative projects where debugging is part of the fun :D</p>
+          <div class="strip-content">
+            <h3>Coding & Creative Builds 💻</h3>
+            <p>Turning ideas into working code — websites, games, and creative projects where debugging is part of the fun.</p>
           </div>
-        </section>
-
-        <section class="about-strip fade-in">
-          <div class="about-strip-photo" aria-hidden="true">
+        </div>
+ 
+        <div class="about-strip reveal">
+          <div class="strip-photo">
             <picture>
               <source srcset="images/arduino1.webp" type="image/webp" />
-              <img src="images/arduino1.jpg" alt="" />
+              <img src="images/arduino1.jpg" alt="Arduino" />
             </picture>
           </div>
-          <div class="about-strip-photo" aria-hidden="true"><img src="images/arduio2.jpg" alt="" /></div>
-          <div class="about-strip-content">
-            <h3>Arduino Projects</h3>
-            <p>From Arduino/C/C++ experiments to hands-on tinkering, I like building physical things that do something cool!</p>
+          <div class="strip-photo"><img src="images/arduio2.jpg" alt="Arduino project" /></div>
+          <div class="strip-content">
+            <h3>Arduino Projects ⚡</h3>
+            <p>From Arduino/C/C++ experiments to hands-on tinkering — building physical things that actually do something cool.</p>
           </div>
-        </section>
-
-        <section class="about-strip fade-in">
-          <div class="about-strip-photo" aria-hidden="true"><img src="images/teaching1.jpg" alt="" /></div>
-          <div class="about-strip-photo" aria-hidden="true">
+        </div>
+ 
+        <div class="about-strip reveal">
+          <div class="strip-photo"><img src="images/teaching1.jpg" alt="Teaching" /></div>
+          <div class="strip-photo">
             <picture>
               <source srcset="images/teaching2.webp" type="image/webp" />
-              <img src="images/teaching2.jpg" alt="" />
+              <img src="images/teaching2.jpg" alt="Mentoring" />
             </picture>
           </div>
-          <div class="about-strip-content">
-            <h3>Teaching & Mentoring</h3>
-            <p>I’ve helped as a coding club instructor and supported Grade 8 math and science because learning gets better when you share it :) </p>
+          <div class="strip-content">
+            <h3>Teaching & Mentoring 📚</h3>
+            <p>Coding club instructor and Grade 8 math & science support — learning gets better when you share it.</p>
           </div>
-        </section>
-
+        </div>
+ 
       </div>
-    </section>
-
-
-
-    <div class="engineering-cta-outer fade-in">
-      <a href="engineering.html" class="engineering-cta">Why I Choose Engineering</a>
     </div>
-    <section class="section fade-in">
-      <h2>Projects ✨</h2>
-
-
-
-      <div class="projects">
-
-        <div class="project">
-          <h3>Hackathon Projects 💻</h3>
-          <p>Take a look at some of the projects ive created during hackathons! 💻😎</p>
-          <a href="projecthackathons.html">View Projects</a>
-        </div>
-
-        <div class="project">
-          <h3>P5.js Projects 🎮</h3>
-          <p>Check out some of my p5.js projects built with JavaScript! I love incorporating machine learning to build hand tracking games and much more!</p>
-          <a href="p5.html">View Projects</a>
-        </div>
-    </section>
-
-
-    <section class="section fade-in">
-      <p>PS. I also built this website myself! 🌟 Click <a href="https://github.com/Aliza-F/portfolio">here</a> to check out the code!</p>
-
-      <h2>Skills ✨</h2>
-      <p class="skills">JavaScript • HTML • CSS • Lua • Python • SQL • Arduino (C/C++) • p5.js • ml5.js • Git • Debugging • Testing • Problem Solving</p>
-
-    </section>
-
+  </section>
+ 
+  <!-- ENGINEERING CTA -->
+  <div class="engineering-cta-wrap reveal">
+    <a href="engineering.html" class="engineering-cta">Why I Choose Engineering</a>
   </div>
+ 
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-label reveal">What I've built</span>
+      <h2 class="section-title reveal">Projects ✨</h2>
+      <div class="section-rule reveal"></div>
+ 
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-icon">💻</div>
+          <h3>Hackathon Projects</h3>
+          <p>Projects built under pressure, with purpose. Take a look at the things I've created during hackathons!</p>
+          <a href="projecthackathons.html" class="project-link">View Projects</a>
+        </div>
+ 
+        <div class="project-card reveal">
+          <div class="project-icon">🎮</div>
+          <h3>P5.js Projects</h3>
+          <p>Creative JavaScript experiments with p5.js — including hand-tracking games powered by ml5.js machine learning.</p>
+          <a href="p5.html" class="project-link">View Projects</a>
+        </div>
+      </div>
+ 
+      <p class="projects-footer-note">
+        PS — I built this website myself! 🌟
+        <a href="https://github.com/Aliza-F/portfolio">Check out the code on GitHub.</a>
+      </p>
+    </div>
+  </section>
+ 
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="glass-card reveal">
+        <span class="section-label">What I work with</span>
+        <h2 class="section-title">Skills ✨</h2>
+        <div class="section-rule"></div>
+        <div class="skills-flex">
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Lua</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Arduino (C/C++)</span>
+          <span class="skill-pill">p5.js</span>
+          <span class="skill-pill">ml5.js</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Debugging</span>
+          <span class="skill-pill">Testing</span>
+          <span class="skill-pill">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer>
+    <p>Crafted with 💜 by <a href="https://github.com/Aliza-F">Aliza Faraz</a> · Inspired by Howl's Moving Castle</p>
+  </footer>
+   <script src="script.js"></script>
+</div>
+
 </body>
 </html>
-

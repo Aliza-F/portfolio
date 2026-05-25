@@ -1,30 +1,31 @@
-let playing = false;
-
 function toggleMusic() {
-  const music = document.getElementById("bg-music");
-  const playBtn = document.getElementById("play-btn");
-  if (!playing) {
-    music.play();
-    playBtn.textContent = "⏸️";
-  } else {
-    music.pause();
-    playBtn.textContent = "▶️";
+    const music = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-btn');
+    if (music.paused) {
+      music.play().catch(() => {});
+      playBtn.textContent = '⏸️';
+    } else {
+      music.pause();
+      playBtn.textContent = '▶️';
+    }
   }
-  playing = !playing;
-}
-
-function adjustVolume() {
-  const music = document.getElementById("bg-music");
-  const volumeSlider = document.getElementById("volume-slider");
-  music.volume = volumeSlider.value;
-}
-
-// Simple interactivity for the welcome photo placeholder
-function toggleWelcomeVibe() {
-  const btn = document.querySelector('.about-welcome-photo');
-  if (!btn) return;
-
-  const isOn = btn.classList.toggle('is-on');
-  btn.textContent = isOn ? '✨ Welcome!' : 'Welcome Photo';
-}
-
+ 
+  function adjustVolume() {
+    document.getElementById('bg-music').volume = document.getElementById('volume-slider').value;
+  }
+ 
+  function toggleWelcomeVibe() {
+    document.querySelector('.welcome-gif-btn').classList.toggle('is-on');
+  }
+ 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = (i * 0.06) + 's';
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+ 
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
