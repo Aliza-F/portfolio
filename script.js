@@ -13,11 +13,7 @@ function toggleMusic() {
   function adjustVolume() {
     document.getElementById('bg-music').volume = document.getElementById('volume-slider').value;
   }
- 
-  function toggleWelcomeVibe() {
-    document.querySelector('.welcome-gif-btn').classList.toggle('is-on');
-  }
- 
+  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {

@@ -6,31 +6,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="updatedstyle.css" />
+<link rel="stylesheet" href="updatedStyle.css" />
 </head>
 
 <body>
-
-
-
 
   <div class="overlay">
       <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">AF</a>
     <ul class="nav-links">
+      <li><a href="#projects">Work</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="mailto:alizafaraz122@gmail.com">Contact</a></li>
     </ul>
   </nav>
 
   <header class="hero">
-    <p class="hero-eyebrow">Welcome to my corner of the internet</p>
+      <!-- Portrait -->
+      <div class="hero-portrait">
+        <span class="hero-portrait-fallback" aria-hidden="true">AF</span>
+        <img src="images/aliza.jpg" alt="Aliza Faraz" onerror="this.parentElement.classList.add('no-photo')" />
+      </div>
+
       <h1>Aliza Faraz</h1>
-      <p class="hero-sub">Developer • Student • Innovator</p>
-      <div class="hero-divider"></div>
+
+      <!-- Qualification lines: edit these to match your program, school, year and availability -->
+      <div class="hero-facts">
+        <p class="hero-degree">BEng, Engineering Systems &amp; Computing (Co-op)</p>
+        <p class="hero-study">University of Guelph &middot; Second year &middot; Milton, ON</p>
+        <p class="hero-availability">Open to Summer 2027 internships</p>
+      </div>
 
       <div class="social-icons">
         <a href="mailto:alizafaraz122@gmail.com" target="_blank" rel="noopener" aria-label="Email">
@@ -59,173 +66,343 @@
       </audio>
     </div>
 
+    <!-- Résumé: save your PDF as aliza-faraz-resume.pdf in this folder -->
+    <a class="hero-resume" href="aliza-faraz-resume.pdf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
+      Résumé
+    </a>
+
     <div class="scroll-cue">
       <span>Scroll</span>
       <div class="scroll-dot"></div>
     </div>
 
     </header>
-  <!-- WELCOME -->
-  <section id="about">
-    <div class="container">
-      <div class="glass-card reveal">
-        <div class="welcome-grid">
-          <div class="welcome-text">
-            <span class="section-label">Hey there 👋</span>
-            <h2>Welcome!</h2>
-            <p class="tagline">Big ideas start on the trail and come alive in code ✨</p>
-            <p>
-              Hi, I'm Aliza! I'm a Systems and Computing Engineering student who loves
-              building cool things — from React apps to Arduino sensors. I genuinely enjoy
-              debugging (yes, really), and I'm currently working on launching my first major
-              game development project. My goal is to use engineering to build a more
-              sustainable and inclusive future.
-            </p>
-          </div>
-          <button type="button" class="welcome-gif-btn" onclick="toggleWelcomeVibe()" aria-label="Toggle welcome vibe">
-            <img src="images/hello-wave.gif" alt="Hello wave" />
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
- 
-  <!-- ABOUT STRIPS -->
-  <section>
-    <div class="container">
-      <span class="section-label reveal">A little about me</span>
-      <h2 class="section-title reveal">Interests & Passions</h2>
-      <div class="section-rule reveal"></div>
- 
-      <div class="about-strips">
- 
-        <div class="about-strip reveal">
-          <div class="strip-photo">
-            <picture>
-              <source srcset="images/hiking1.webp" type="image/webp" />
-              <img src="images/hiking1.jpg" alt="Hiking" />
-            </picture>
-          </div>
-          <div class="strip-photo">
-            <picture>
-              <source srcset="images/hiking2.webp" type="image/webp" />
-              <img src="images/hiking2.jpg" alt="Nature trail" />
-            </picture>
-          </div>
-          <div class="strip-content">
-            <h3>Hiking & Nature 🌿</h3>
-            <p>I love exploring new trails and connecting with nature. Big ideas often start on the path!</p>
-          </div>
-        </div>
- 
-        <div class="about-strip reveal">
-          <div class="strip-photo"><img src="images/coding1.png" alt="Coding" /></div>
-          <div class="strip-photo">
-            <picture>
-              <source srcset="images/coding2.webp" type="image/webp" />
-              <img src="images/coding2.jpg" alt="Creative builds" />
-            </picture>
-          </div>
-          <div class="strip-content">
-            <h3>Coding & Creative Builds 💻</h3>
-            <p>Turning ideas into working code — websites, games, and creative projects where debugging is part of the fun.</p>
-          </div>
-        </div>
- 
-        <div class="about-strip reveal">
-          <div class="strip-photo">
-            <picture>
-              <source srcset="images/arduino1.webp" type="image/webp" />
-              <img src="images/arduino1.jpg" alt="Arduino" />
-            </picture>
-          </div>
-          <div class="strip-photo"><img src="images/arduio2.jpg" alt="Arduino project" /></div>
-          <div class="strip-content">
-            <h3>Arduino Projects ⚡</h3>
-            <p>From Arduino/C/C++ experiments to hands-on tinkering — building physical things that actually do something cool.</p>
-          </div>
-        </div>
- 
-        <div class="about-strip reveal">
-          <div class="strip-photo"><img src="images/teaching1.jpg" alt="Teaching" /></div>
-          <div class="strip-photo">
-            <picture>
-              <source srcset="images/teaching2.webp" type="image/webp" />
-              <img src="images/teaching2.jpg" alt="Mentoring" />
-            </picture>
-          </div>
-          <div class="strip-content">
-            <h3>Teaching & Mentoring 📚</h3>
-            <p>Coding club instructor and Grade 8 math & science support — learning gets better when you share it.</p>
-          </div>
-        </div>
- 
-      </div>
-    </div>
-  </section>
- 
-  <!-- ENGINEERING CTA -->
-  <div class="engineering-cta-wrap reveal">
-    <a href="engineering.html" class="engineering-cta">Why I Choose Engineering</a>
-  </div>
- 
-  <!-- PROJECTS -->
+
+  <!-- SELECTED WORK -->
   <section id="projects">
     <div class="container">
-      <span class="section-label reveal">What I've built - (more to be added soon!)</span>
-      <h2 class="section-title reveal">Projects ✨</h2>
+      <h2 class="section-title reveal">Selected work</h2>
       <div class="section-rule reveal"></div>
- 
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-icon">💻</div>
-          <h3>Hackathon Projects</h3>
-          <p>Projects built under pressure, with purpose. Take a look at the things I've created during hackathons!</p>
-          <a href="projecthackathons.html" class="project-link">View Projects</a>
+
+      <div class="work-list">
+
+        <article class="work-card reveal">
+          <a class="work-shot" href="projecthackathons.html#safespace" aria-label="SafeSpace project details">
+            <img src="images/SafeSpace5.jpeg" alt="SafeSpace focus room with an ambient scene and playlist controls" loading="lazy" />
+          </a>
+          <div class="work-body">
+            <p class="work-meta">Hackathon &middot; Jun 2024</p>
+            <h3 class="work-title"><a href="projecthackathons.html#safespace">SafeSpace</a></h3>
+            <p class="work-desc">Study rooms, ambient audio and task tools for students with ADHD.</p>
+            <p class="work-context">Solo &middot; Illuminate hackathon &middot; 48 hours</p>
+            <ul class="work-stack">
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+              <li>Quote API</li>
+            </ul>
+            <a class="work-link" href="https://github.com/Aliza-F/Safe_Space" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <a class="work-shot" href="projecthackathons.html#ourcity" aria-label="OurCity project details">
+            <img src="images/ourcity1.jpeg" alt="OurCity homepage with navigation and a sign-up call to action" loading="lazy" />
+          </a>
+          <div class="work-body">
+            <p class="work-meta">Hackathon &amp; program &middot; Jul&ndash;Aug 2023</p>
+            <h3 class="work-title"><a href="projecthackathons.html#ourcity">OurCity</a></h3>
+            <p class="work-desc">A civic platform connecting youth with urban-planning decisions.</p>
+            <p class="work-context">hEr VOLUTION STEMing UP &middot; UN SDG 11</p>
+            <ul class="work-stack">
+              <li>React</li>
+              <li>Chakra UI</li>
+              <li>Node.js</li>
+            </ul>
+            <a class="work-link" href="https://github.com/Aliza-F/OurCity" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <a class="work-shot" href="p5.html" aria-label="Spellbound Defense project details">
+            <img src="images/p5-01.png" alt="Spellbound Defense running in the browser with hand-tracked targets" loading="lazy" />
+          </a>
+          <div class="work-body">
+            <p class="work-meta">Personal &amp; creative</p>
+            <h3 class="work-title"><a href="p5.html">Spellbound Defense</a></h3>
+            <p class="work-desc">A tower-defense game controlled by hand gestures tracked through the webcam.</p>
+            <p class="work-context">Hand tracking with ml5.js</p>
+            <ul class="work-stack">
+              <li>JavaScript</li>
+              <li>p5.js</li>
+              <li>ml5.js</li>
+              <li>HTML5 Canvas</li>
+            </ul>
+            <a class="work-link" href="https://github.com/Aliza-F/Spellbound-Defense-Game-ML" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- FULL INDEX: add a row here whenever there is a new project -->
+      <div class="index-panel reveal">
+        <h3 class="index-heading">All projects</h3>
+
+        <div class="index-group">
+          <div class="index-group-head">
+            <h4 class="index-group-title">Hackathon &amp; programs</h4>
+            <a class="index-group-more" href="projecthackathons.html">All hackathon projects</a>
+          </div>
+          <ul class="index-rows">
+            <li class="index-row">
+              <a class="index-name" href="projecthackathons.html#safespace">SafeSpace</a>
+              <span class="index-year">2024</span>
+              <span class="index-stack">JavaScript, HTML/CSS, quote API</span>
+              <a class="index-repo" href="https://github.com/Aliza-F/Safe_Space" target="_blank" rel="noopener">Repository</a>
+            </li>
+            <li class="index-row">
+              <a class="index-name" href="projecthackathons.html#ourcity">OurCity</a>
+              <span class="index-year">2023</span>
+              <span class="index-stack">React, Chakra UI, Node.js</span>
+              <a class="index-repo" href="https://github.com/Aliza-F/OurCity" target="_blank" rel="noopener">Repository</a>
+            </li>
+            <li class="index-row">
+              <a class="index-name" href="projecthackathons.html#naturehut">NatureHut</a>
+              <span class="index-year">2022</span>
+              <span class="index-stack">Web prototype &middot; team of three</span>
+              <a class="index-repo" href="https://github.com/AlizaFaraz/NatureHut" target="_blank" rel="noopener">Repository</a>
+            </li>
+          </ul>
         </div>
- 
-        <div class="project-card reveal">
-          <div class="project-icon">🎮</div>
-          <h3>P5.js Projects</h3>
-          <p>Creative JavaScript experiments with p5.js — including hand-tracking games powered by ml5.js machine learning.</p>
-          <a href="p5.html" class="project-link">View Projects</a>
+
+        <div class="index-group">
+          <div class="index-group-head">
+            <h4 class="index-group-title">Personal &amp; creative</h4>
+            <a class="index-group-more" href="personalprojects.html">All personal projects</a>
+          </div>
+          <ul class="index-rows">
+            <li class="index-row">
+              <span class="index-cell">
+                <span class="index-name">Custom Embedded Keyboard</span>
+                <span class="index-note">PCB routed in KiCad, with matrix-scanning and debounce firmware.</span>
+              </span>
+              <span class="index-year">2026</span>
+              <span class="index-stack">KiCad, embedded C/C++, serial</span>
+              <span class="index-tag">Hardware build</span>
+            </li>
+            <li class="index-row">
+              <span class="index-cell">
+                <span class="index-name">MindBridge</span>
+                <span class="index-note">Arduino sensors rendered live in the browser, with yoga-pose triggers.</span>
+              </span>
+              <span class="index-year">2025</span>
+              <span class="index-stack">JavaScript, p5.js, ml5.js (PoseNet)</span>
+              <span class="index-tag">Hardware + web</span>
+            </li>
+            <li class="index-row">
+              <a class="index-name" href="p5.html">Spellbound Defense</a>
+              <span class="index-year">&mdash;</span>
+              <span class="index-stack">JavaScript, ml5.js, HTML5 Canvas</span>
+              <a class="index-repo" href="https://github.com/Aliza-F/Spellbound-Defense-Game-ML" target="_blank" rel="noopener">Repository</a>
+            </li>
+            <li class="index-row">
+              <a class="index-name" href="https://github.com/Aliza-F/portfolio" target="_blank" rel="noopener">This portfolio</a>
+              <span class="index-year">2026</span>
+              <span class="index-stack">HTML, CSS, JavaScript</span>
+              <a class="index-repo" href="https://github.com/Aliza-F/portfolio" target="_blank" rel="noopener">Repository</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="index-group">
+          <div class="index-group-head">
+            <h4 class="index-group-title">University</h4>
+            <a class="index-group-more" href="universityprojects.html">All university projects</a>
+          </div>
+          <ul class="index-rows">
+            <li class="index-row">
+              <span class="index-cell">
+                <span class="index-name">Automated Teddy Bear Wheelchair</span>
+                <span class="index-note">Motorized wheelchair prototype with Arduino motor-driver control.</span>
+              </span>
+              <span class="index-year">2025</span>
+              <span class="index-stack">Arduino (C/C++), motor drivers</span>
+              <span class="index-tag">Graded 90%</span>
+            </li>
+            <li class="index-row">
+              <span class="index-cell">
+                <span class="index-name">Campus Event Booking System</span>
+                <span class="index-note">Event bookings, waitlists and cancellations with state saved between sessions.</span>
+              </span>
+              <span class="index-year">2026</span>
+              <span class="index-stack">Java &middot; ENGG*1420 &middot; team build</span>
+              <a class="index-repo" href="https://github.com/meskyahya/Campus-Event-Booking-System" target="_blank" rel="noopener">Repository</a>
+            </li>
+            <li class="index-row">
+              <span class="index-cell">
+                <span class="index-name">AeroDive</span>
+                <span class="index-note">Wind-powered car prototype built for the Guelph Engineering Competition.</span>
+              </span>
+              <span class="index-year">&mdash;</span>
+              <span class="index-stack">Junior design &middot; wind-powered vehicle</span>
+              <span class="index-tag">Passed all tests</span>
+            </li>
+          </ul>
         </div>
       </div>
- 
-      <p class="projects-footer-note">
-        PS — I built this website myself! 🌟
-        <a href="https://github.com/Aliza-F/portfolio">Check out the code on GitHub.</a>
-      </p>
+
     </div>
   </section>
- 
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-panel reveal">
+
+        <div class="about-copy">
+          <h2 class="section-title">About</h2>
+          <div class="section-rule"></div>
+          <p>
+            I'm a second-year Engineering Systems and Computing student at the University of Guelph,
+    in the co-op stream. I like building both hardware and software: custom PCBs and firmware
+    at the bench, and JavaScript and React on the web. Right now I'm working on my first full
+    game.
+  </p>
+  <p>
+    Most of what I know came from making something small and then fixing whatever broke. That
+    meant hackathons, two years in the STEMing UP program, lots of p5.js experiments, and
+    teaching Python to other students. I care about making things that work for everyone,
+    especially the people who often get left out when something is designed.
+  </p>
+          <a href="engineering.html" class="about-link">Why I chose engineering</a>
+        </div>
+
+        <div class="about-credentials">
+          <h3 class="cred-heading">Education &amp; experience</h3>
+          <ul class="cred-list">
+            <li class="cred-item">
+              <p class="cred-role">BEng, Engineering Systems &amp; Computing (Co-op)</p>
+              <p class="cred-meta">University of Guelph &middot; 2025&ndash;present</p>
+            </li>
+            <li class="cred-item">
+              <p class="cred-role">Python Instructor &amp; Curriculum Developer</p>
+              <p class="cred-meta">hEr VOLUTION &middot; Jun&ndash;Aug 2026</p>
+            </li>
+            <li class="cred-item">
+              <p class="cred-role">Founder &amp; President, Student Hack Club</p>
+              <p class="cred-meta">Milton, ON &middot; Nov 2024&ndash;Jun 2025</p>
+            </li>
+            <li class="cred-item">
+              <p class="cred-role">STEM Digital Citizenship Award</p>
+              <p class="cred-meta">Ontario Ministry of Education &middot; Jun 2025</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-      <div class="glass-card reveal">
-        <span class="section-label">What I work with</span>
-        <h2 class="section-title">Skills ✨</h2>
-        <div class="section-rule"></div>
-        <div class="skills-flex">
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">HTML</span>
-          <span class="skill-pill">CSS</span>
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">Lua</span>
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">Arduino (C/C++)</span>
-          <span class="skill-pill">p5.js</span>
-          <span class="skill-pill">ml5.js</span>
-          <span class="skill-pill">React</span>
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">Debugging</span>
-          <span class="skill-pill">Testing</span>
-          <span class="skill-pill">Problem Solving</span>
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="section-rule reveal"></div>
+
+      <div class="skill-groups skill-panel reveal">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <div class="skills-flex">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Lua</span>
+            <span class="skill-pill">SQL</span>
+          </div>
         </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Web &amp; APIs</h3>
+          <div class="skills-flex">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Chakra UI</span>
+            <span class="skill-pill">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Hardware &amp; embedded</h3>
+          <div class="skills-flex">
+            <span class="skill-pill">Arduino</span>
+            <span class="skill-pill">KiCad</span>
+            <span class="skill-pill">Embedded firmware</span>
+            <span class="skill-pill">Serial communication</span>
+            <span class="skill-pill">Sensors</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Creative coding</h3>
+          <div class="skills-flex">
+            <span class="skill-pill">p5.js</span>
+            <span class="skill-pill">ml5.js (PoseNet)</span>
+            <span class="skill-pill">Roblox Studio</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Practice</h3>
+          <div class="skills-flex">
+            <span class="skill-pill">Git/GitHub</span>
+            <span class="skill-pill">OOP</span>
+            <span class="skill-pill">Agile</span>
+            <span class="skill-pill">Debugging</span>
+            <span class="skill-pill">Testing</span>
+            <span class="skill-pill">Accessibility</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
- 
+
+  <!-- INTERESTS -->
+  <section id="interests">
+    <div class="container">
+      <h2 class="section-title reveal">Interests</h2>
+      <div class="section-rule reveal"></div>
+
+      <div class="interest-band reveal">
+        <figure class="interest-card">
+          <img src="images/hiking1.webp" alt="A hiking trail" loading="lazy" />
+          <figcaption class="interest-label">Hiking &amp; nature</figcaption>
+        </figure>
+        <figure class="interest-card">
+          <img src="images/coding1.png" alt="Working on a coding project" loading="lazy" />
+          <figcaption class="interest-label">Coding &amp; creative builds</figcaption>
+        </figure>
+        <figure class="interest-card">
+          <img src="images/arduino1.webp" alt="Arduino board and wiring" loading="lazy" />
+          <figcaption class="interest-label">Arduino projects</figcaption>
+        </figure>
+        <figure class="interest-card">
+          <img src="images/teaching2.webp" alt="Mentoring students" loading="lazy" />
+          <figcaption class="interest-label">Teaching &amp; mentoring</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>Crafted with 💜 by <a href="https://github.com/Aliza-F">Aliza Faraz</a> · Inspired by Howl's Moving Castle</p>
